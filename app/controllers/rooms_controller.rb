@@ -19,7 +19,7 @@ class RoomsController < ApplicationController
     name = params[:name].split "-"
     rm = name[0]
     num = name[1]
-    room = Room.get_room_with_events(rm, num, params[:date], params:period)
+    room = Room.get_room_with_events(rm, num, params[:date])
     respond_with room
   end
   

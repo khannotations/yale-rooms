@@ -1,0 +1,26 @@
+.header
+  .container
+    %ul.pull-left
+      %a{:href => "/"}
+        %li Home
+      %a{:href => "/me"}
+        %li My events
+    %ul.pull-right
+      %a{:href => "/welcome"}
+        %li Welcome
+      %a{:href => "/about"}
+        %li About
+      %a{:href => "/logout"}
+        %li Logout
+#about
+  .container{:style=>"max-width:750px;"}
+    %h2{:style=>"margin-top:150px;"} Yale Reserve
+
+    %p 
+      Yale Reserve was made for the 2nd annual YCC / Yale Bootup Hackathon, February 23-24, 2012. It's made using a combination of Ruby on Rails, SASS CSS, Coffeescript and a framework I tried for the first time, Angular.JS. 
+
+    %p 
+      Angular is a bit better than Backbone in that it allows you to write code directly into the HTML and the models and views are deeply linked—which means that when data is updated on the backend, your views are automatically updated, too. No linking required, and it works vice-versa as well. The learning curve, however, was really steep for me—probably a mixture of thick-headedness, tiredness and carelessness—and I think I only scratched the surface with this. Hopefully, it'll continue further development to make it to yale students!
+
+    %p 
+      %a{:href=> "http://rafikhan.me", :style=>"color:red"} Rafi Khan

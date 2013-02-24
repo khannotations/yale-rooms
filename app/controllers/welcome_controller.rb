@@ -22,4 +22,8 @@ class WelcomeController < ApplicationController
   def welcome
     session[:cas_user] = nil
   end
+
+  def about
+    
+  end
 end

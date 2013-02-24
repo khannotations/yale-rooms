@@ -43,7 +43,7 @@ a {
     padding-left: 3px;
   }
   tr {
-    border-bottom: 1pt solid #ededed;
+    border-bottom: 1pt solid #e5e5e5;
     height: 30px;
   }
   .outer {
@@ -63,8 +63,12 @@ a {
     font-size: 40%;
     height: 100%;
     background-color: #444;
-    -webkit-transition: background-color 0.2s;
+    color: #eee;
+    text-align:center;
+    line-height: 2.5;
+    -webkit-transition: all 0.2s;
     &:hover {
+      color: white;
       background-color: #000;
     }
   }

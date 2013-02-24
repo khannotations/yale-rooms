@@ -20,12 +20,18 @@
         <a href="/">
           <li>Home</li>
         </a>
+        <a href='/me'>
+          <li>My events</li>
+        </a>
+        <li>Hey how you doin' there <%= @user.name %>?</li>
+      </ul>
+      <ul class='pull-right'>
+        <a href="/welcome">
+          <li>Welcome</li>
+        </a>
         <a href="/about">
           <li>About</li>
         </a>
-      </ul>
-      <ul class='pull-right'>
-        <li>Hey how you doin' there <%= @user.name %>?</li>
         <a href="/logout">
           <li>Logout</li>
         </a>

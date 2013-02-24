@@ -14,10 +14,10 @@
       .when("/rooms/all/:date/:period", 
         {templateUrl: '/assets/rooms.html', controller: @RoomsCtrl})
       .when("/rooms/:name", 
-        {templateUrl: '/assets/room.html', controller: @RoomsCtrl})
+        {templateUrl: '/assets/rooms.html', controller: @RoomsCtrl})
       .when("/rooms/:name/:date", 
-        {templateUrl: '/assets/room.html', controller: @RoomsCtrl})
+        {templateUrl: '/assets/rooms.html', controller: @RoomsCtrl})
       .when("/rooms/:name/:date/:period", 
-        {templateUrl: '/assets/room.html', controller: @RoomsCtrl})
+        {templateUrl: '/assets/rooms.html', controller: @RoomsCtrl})
       .otherwise({redirectTo: "/rooms/all/today/week"})
   ])
