@@ -561,8 +561,8 @@ e2 = Event.create([
 e3 = Event.create([
   name: "Dance Party!",
   room_number: "015",
-  start_time: Time.now() + 10.hour,
-  end_time: Time.now() + 15.hour,
+  start_time: Time.now() + 1.hour,
+  end_time: Time.now() + 4.hour,
   organization: yale,
   room: rooms.first
 ])
