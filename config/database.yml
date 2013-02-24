@@ -1,0 +1,19 @@
+# Configure Using Gemfile
+# gem 'pg'
+#
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: rooms_development
+  pool: 5
+  username: yalerooms
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: rooms_test
+  pool: 5
+  username: yalerooms
+  password:
+
