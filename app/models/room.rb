@@ -13,6 +13,10 @@ class Room < ActiveRecord::Base
     }
   end
 
+  def room
+    return name + " " + number
+  end
+
   def Room.get_room_with_events(rm, num, date, period) 
     room = Room.where(name: rm, number: num).first
     return [] if not room.empty?
@@ -23,11 +27,12 @@ class Room < ActiveRecord::Base
 
   def events_in(t_start, period)
     ps = t_start.split("-")
-    now = Time.new(ps[0].to_i, ps[1].to_i, ps[2].to_i, 0, 0, 0, "-05:00")
+    start = Time.new(ps[0].to_i, ps[1].to_i, ps[2].to_i, 0, 0, 0, "-05:00")
     if period == "week"
-      t_end = now+1.week
+      # t_end = now+1.week
+      t_end = start+1.day
     else
-      t_end = now+1.day
+      t_end = start+1.day
     end
     return self.events.where("start_time < ? AND end_time > ?", t_start, t_end)
   end

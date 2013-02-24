@@ -22,4 +22,8 @@ class WelcomeController < ApplicationController
   def welcome
     session[:cas_user] = nil
   end
+
+  def logout
+    CASClient::Frameworks::Rails::Filter.logout(self)
+  end
 end

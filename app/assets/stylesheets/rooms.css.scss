@@ -63,8 +63,10 @@ a {
     font-size: 40%;
     height: 100%;
     background-color: #444;
-    -webkit-transition: background-color 0.2s;
+    -webkit-transition: all 0.2s;
+    color: #eee;
     &:hover {
+      color: white;
       background-color: #000;
     }
   }

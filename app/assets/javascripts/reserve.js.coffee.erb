@@ -5,19 +5,11 @@
   ])
   .config(['$routeProvider', ($routeProvider)->
     $routeProvider
-      .when("/rooms", 
-        {templateUrl: '/assets/rooms.html', controller: @RoomsCtrl})
-      .when("/rooms/all", 
-        {templateUrl: '/assets/rooms.html', controller: @RoomsCtrl})
-      .when("/rooms/all/:date", 
-        {templateUrl: '/assets/rooms.html', controller: @RoomsCtrl})
-      .when("/rooms/all/:date/:period", 
-        {templateUrl: '/assets/rooms.html', controller: @RoomsCtrl})
-      .when("/rooms/:name", 
-        {templateUrl: '/assets/room.html', controller: @RoomsCtrl})
-      .when("/rooms/:name/:date", 
-        {templateUrl: '/assets/room.html', controller: @RoomsCtrl})
-      .when("/rooms/:name/:date/:period", 
-        {templateUrl: '/assets/room.html', controller: @RoomsCtrl})
-      .otherwise({redirectTo: "/rooms/all/today/week"})
+      .when("/events", 
+        {templateUrl: '/assets/events.html', controller: @EventsCtrl})
+      .when("/events/:date", 
+        {templateUrl: '/assets/events.html', controller: @EventsCtrl})
+      .when("/events/:date/:room", 
+        {templateUrl: '/assets/events.html', controller: @EventsCtrl})
+      .otherwise({redirectTo: "/events/today/"})
   ])
