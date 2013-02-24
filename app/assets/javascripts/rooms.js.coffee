@@ -10,21 +10,38 @@
   )
 ]
 
-@EventsCtrl = ["$scope", "$routeParams", "Events", ($scope, $routeParams, Events) ->
+# <<<<<<< HEAD
+# @EventsCtrl = ["$scope", "$routeParams", "Events", ($scope, $routeParams, Events) ->
+#   date = $routeParams.date || "today"
+#   date = moment().format("YYYY-MM-DD") if date is "today"
+#   # period = $routeParams.period || "week"
+#   name = $routeParams.name || ""
+#   console.log date, name
+#   if name is ""
+#     $scope.rooms = Events.query(date: date, (data) ->
+#       console.log data
+#     )
+#   else
+#     $scope.room = Events.get(name: name, date: date)
+
+
+#   # console.log $scope.room, $scope.rooms
+# =======
+@RoomsCtrl = ["$scope", "$routeParams", "Rooms", ($scope, $routeParams, Rooms) ->
+  t = this
+
   date = $routeParams.date || "today"
   date = moment().format("YYYY-MM-DD") if date is "today"
-  # period = $routeParams.period || "week"
-  name = $routeParams.name || ""
-  console.log date, name
-  if name is ""
-    $scope.rooms = Events.query(date: date, (data) ->
-      console.log data
-    )
+  t.date = date
+  period = $routeParams.period || "week"
+  name = $routeParams.name || "all"
+  console.log name, date, period
+  if name is "all"
+    $scope.rooms = Rooms.query(name: "all", date: date, period: period)
   else
-    $scope.room = Events.get(name: name, date: date)
-
-
-  # console.log $scope.room, $scope.rooms
+    $scope.rooms = []
+    $scope.room = Rooms.get(name: name, date: date, period: period)
+    $scope.rooms.push $scope.room
 
   $scope.eventClass = (e) ->
     "event-#{e.id}"
@@ -32,6 +49,7 @@
     moment(time).format("MM-DD-YYYY")
 
   $scope.eventStyle = (start, end) ->
+
     start = moment(start)
     end = moment(end)
     start_hour = start.hour()
@@ -48,12 +66,15 @@
 
   $scope.modal = (e) ->
     $("#myModalLabel").text(e.name)
-    start = moment(e.start_time).format("h:mm a")
-    end = moment(e.end_time).format("h:mm a")
-    $(".modal-body").html("<p><b>Start</b>: #{start}</p><p><b>End</b>: #{end}</p>")
+    t_start = moment(e.start_time).format("h:mm a")
+    t_end = moment(e.end_time).format("h:mm a")
+    $(".modal-body").html("<p><b>Start:</b> #{t_start}</p><p><b>End:</b> #{t_end}</p>")
     $("#myModal").modal()
 
   $scope.newEvent = (room, hour) ->
-    $("#myModalLabel").text("New event in #{room.name} #{room.number}")
-
-]
+    $("#myModalLabel").text("Reserving #{room.name} #{room.number}")
+    hour = 12 if hour is 0
+    $(".modal-body").html("<b>Organization</b>: &nbsp; &nbsp;&nbsp;<select><option value='yale'>Yale College</option></select>\
+<p><b>Start: &nbsp;</b> <input type='text' value='#{hour}:00 '/></p><p><b>End: &nbsp; &nbsp;&nbsp;</b><input type='text' /></p>")
+    $("#myModal").modal()
+  ]

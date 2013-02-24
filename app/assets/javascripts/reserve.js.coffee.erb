@@ -5,6 +5,7 @@
   ])
   .config(['$routeProvider', ($routeProvider)->
     $routeProvider
+<<<<<<< HEAD
       .when("/events", 
         {templateUrl: '/assets/events.html', controller: @EventsCtrl})
       .when("/events/:date", 
@@ -12,4 +13,23 @@
       .when("/events/:date/:room", 
         {templateUrl: '/assets/events.html', controller: @EventsCtrl})
       .otherwise({redirectTo: "/events/today/"})
+=======
+      .when("/rooms", 
+        {templateUrl: '/assets/rooms.html', controller: @RoomsCtrl})
+      .when("/rooms/all", 
+        {templateUrl: '/assets/rooms.html', controller: @RoomsCtrl})
+      .when("/rooms/all/:date", 
+        {templateUrl: '/assets/rooms.html', controller: @RoomsCtrl})
+      .when("/rooms/all/:date/:period", 
+        {templateUrl: '/assets/rooms.html', controller: @RoomsCtrl})
+      .when("/rooms/:name", 
+        {templateUrl: '/assets/rooms.html', controller: @RoomsCtrl})
+      .when("/rooms/:name/:date", 
+        {templateUrl: '/assets/rooms.html', controller: @RoomsCtrl})
+      .when("/rooms/:name/:date/:period", 
+        {templateUrl: '/assets/rooms.html', controller: @RoomsCtrl})
+      .when("/me",
+        {templateUrl: '/assets/me.html', controller: @UsersCtrl})
+      .otherwise({redirectTo: "/rooms/all/today/week"})
+>>>>>>> rooms
   ])

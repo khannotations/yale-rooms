@@ -26,4 +26,7 @@ class WelcomeController < ApplicationController
   def logout
     CASClient::Frameworks::Rails::Filter.logout(self)
   end
+  
+  def about
+  end
 end

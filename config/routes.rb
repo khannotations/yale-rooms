@@ -3,6 +3,7 @@ Rooms::Application.routes.draw do
   root :to => 'welcome#index'
   match 'welcome' => "welcome#welcome"
   match 'logout' => "welcome#logout"
+  match 'about' => "welcome#about"
   match 'user' => "users#me"
 
   resources :organizations do
