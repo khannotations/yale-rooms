@@ -41,3 +41,5 @@ gem 'bootstrap-sass', '~> 2.2.1.1'
 gem 'squeel'
 gem 'gmaps4rails'
 gem 'geocoder'
+gem 'angular-rails'
+

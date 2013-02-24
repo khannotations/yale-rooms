@@ -1,0 +1,39 @@
+#welcome {
+  width: 100%;
+  height: 100%;
+  background-image: url(/assets/fancy-class.jpg);
+}
+
+$w-circ: 300px;
+.welcome-circle {
+  position: absolute; 
+  right: 0;
+  top: 50px;
+  font-size: 48px;
+  line-height: 1;
+  font-weight: bold;
+  text-align: center;
+  width: $w-circ;
+  height: $w-circ;
+  border-radius: $w-circ / 2;
+  background-color: rgba(white, 0.7);
+  > p:first-child {
+    margin-top: $w-circ / 3.5;
+  }
+}
+
+.welcome-text {
+  text-align: right;
+  position: absolute; 
+  right: 0;
+  top: 400px;
+  font-size: 30px;
+  font-weight: 400;
+  color: white;
+}
+
+.welcome-btn {
+  position: absolute; 
+  right: 0;
+  top: 550px;
+}

@@ -1,0 +1,43 @@
+<% # Layout for all content pages %>
+<!DOCTYPE html>
+<html ng-app="Reserve">
+<head>
+  <title>Yale Room Reservations</title>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+  <!-- <link rel="shortcut icon" href="/assets/favicon.ico" /> -->
+  <link href = "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.8/themes/ui-lightness/jquery-ui.css" rel = "stylesheet" type = "text/css" />
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
+  <%= stylesheet_link_tag "application", :media => "all" %>
+
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+        
+      <ul class='pull-left'>
+        <a href="/">
+          <li>Home</li>
+        </a>
+        <a href="/about">
+          <li>About</li>
+        </a>
+      </ul>
+      <ul class='pull-right'>
+        <li>Hey how you doin' there <%= @user.name %>?</li>
+        <a href="/logout">
+          <li>Logout</li>
+        </a>
+      </ul>
+    </div>
+  </div>
+  <div class="content">
+    <div class="container">
+      <div ng-view></div>
+    </div>
+  </div>
+  <%= javascript_include_tag "application" %>
+  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>

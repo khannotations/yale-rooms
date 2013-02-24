@@ -3,8 +3,16 @@ class User < ActiveRecord::Base
   has_many :events, :through => :organizations
 
   validates_presence_of :netid
+  validates_uniqueness_of :netid
 
-  
+  def as_json(options={})
+    {
+      name: name,
+      college: college,
+      year: year,
+      organizations: organizations
+    }
+  end
   # Fetches user email from Yale directory
   def User.get_user netid
     name_regex = /^\s*Name:\s*$/i
@@ -26,9 +34,9 @@ class User < ActiveRecord::Base
       when name_regex
         u.name = value
       when year_regex
-        u.year = year
+        u.year = value
       when college_regex
-        u.college = college
+        u.college = value
       end
     end
     u.save

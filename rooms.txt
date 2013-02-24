@@ -1,0 +1,4891 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+
+<head>
+
+
+
+   <title>R25 WebViewer: Locations by Date</title>
+  
+   
+   <style type="text/css" media="all">@import "https://sfas-r25.its.yale.edu/wv3/css/r25.css";</style>
+   <style type="text/css" media="all">@import "https://sfas-r25.its.yale.edu/wv3/css/wv_event_style.css";</style>
+    
+   
+   
+     
+   <script type="text/javascript" src="https://sfas-r25.its.yale.edu/wv3/js/wv.js"></script>  
+   
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+   <meta http-equiv="Content-Script-Type" content="text/javascript" />
+   <meta http-equiv="Content-Language" content="en-us" />
+   <link rel="Shortcut Icon" type="image/ico" href="https://sfas-r25.its.yale.edu/wv3/images/r25.ico" />
+   <link rel="help" href="https://sfas-r25.its.yale.edu/wv3/help/" title="Site information" />
+   <meta name="author" content="CollegeNET Inc" />
+   <meta name="robots" content="none" />
+   <meta name="description" content="R25/WebViewer 3.3: showing events on campus" />
+   <meta name="keywords" content="events" />
+
+
+   
+   <script type="text/javascript">
+
+      var servletURL = "https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/";
+      var baseURL = "https://sfas-r25.its.yale.edu/wv3/";
+      var onDocLoad = ""
+      
+   </script>
+   
+  <style type="text/css" media="all">
+
+  .NameGridCell {
+    position:absolute;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size:2px;
+    color: inherit;
+    background-color: inherit;
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    height:24px;
+    width: px;
+    cursor: hand;
+    }
+    
+  #NameCells {
+    position:absolute;
+    font-family: verdana, arial, helvetica, sans-serif;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    border-left: 1px solid black;
+    font-size:11px;
+    top: 10px;
+    left: 59px;
+    height: px;
+    voice-family: "\"}\"";
+    voice-family:inherit;
+    left: 59px;
+    }
+    html>body #WeekDay {
+      left: 59px;
+    }
+    
+  .WeekDay {
+    position:absolute;
+    font-family: verdana, arial, helvetica, sans-serif;
+    text-align: center;
+    font-size:9px;
+    top:20px;
+    background-color: white;
+    border-right: 1px solid black;
+    border-bottom:1px solid black;
+    width: px;
+    height: 14px;
+    voice-family: "\"}\"";
+    voice-family:inherit;
+    height:13px;
+    top:19px;
+    }
+    html>body #WeekDay {
+      height:13px;
+      top:19px;
+    }
+    
+  .NameDayLabel {
+    position:absolute;
+    font-family: verdana, arial, helvetica, sans-serif;
+    padding: 0px 0px 0px 0px;
+    font-size: 10px;
+    line-height: 18px;
+    text-align: center;
+    font-size:11px;
+    top: 0px;
+    background-color: #CCCCCC;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom:1px solid white;
+    width: px;
+    height: 18px;
+    voice-family: "\"}\"";
+    voice-family:inherit;
+    height:17px;
+    }
+    html>body #NameDayLabel {
+      height:17px;
+    }
+  
+
+  .GridLines {
+    position:absolute;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size:11px;
+    background-color:black;
+    width: 1px;
+    top: 0px;
+    left: 0px;
+    height: px;
+    }
+
+  .NameGridBottom {
+    position:absolute;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size:11px;
+    background-color:inherit;
+    width: 1px;
+    left: 0px;
+    height: 50px;
+    top: px;
+    }
+  </style>
+
+
+
+</head>
+
+<body onload="eval(onDocLoad);">
+
+<p class="ahem">
+   <object class="ahem">
+      <big>
+         You are using an older browser that cannot display the most recent web standards. We suggest that you upgrade.
+         check out the <a href="http://www.webstandards.org/about/">The Web Standards Project</a> for more information.
+      </big>
+   </object>
+</p>
+
+
+
+
+
+<div id="NavBox">
+      
+   
+      
+         
+   
+      
+   <div id="ContactName">
+      <span class="NonTab">&nbsp;</span>
+      <a class="NonTab" href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_user.Logout">
+         
+      </a>
+   </div>
+   
+
+   
+
+
+
+
+
+<div id="Logo">
+
+
+<img src="
+https://sfas-r25.its.yale.edu/wv3/
+images/FASroomschedulingcaps.gif
+" 
+      height="90px" 
+      width="285px" 
+      alt="FAS Room Scheduling" />
+</div>
+
+       
+  <div id="SuperTabs">
+      
+  
+     <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_search.Default"
+         class="Tab" accesskey="k" title="Search for events and spaces">
+         Loo<span class="AccessKey">k</span>up
+      </a>
+     
+
+       
+      
+      
+
+
+
+
+
+  
+
+     <a href="
+  javascript:openNewWindow('http://www.yale.edu/opa/ybc/download.html')
+  "
+   class="Tab" accesskey="n" title="University Events Calendar">
+         <span class="AccessKey">U</span>niversity Calendar
+      </a>
+
+
+
+
+   
+
+
+      
+      
+      <a href="javascript:openNewWindow('https://sfas-r25.its.yale.edu/wv3/help/help_locations_bydate.html');"
+          class="Tab" accesskey="h" title="View online help">
+         <span class="AccessKey">H</span>elp
+      </a>
+
+
+  </div> 
+<br/>
+
+  <div id="Tabs">
+    
+      
+      <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_event.Default"
+          class="Tab"
+          accesskey="e" title="View events">
+          <span class="AccessKey">E</span>vents
+      </a>
+   
+
+      
+      
+      
+      <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.Default"
+          class="TabCurrent"
+          accesskey="l" title="View locations">
+         <span class="AccessKey">L</span>ocations
+      </a>
+  
+     
+
+      
+
+
+
+
+
+     
+      <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_request.Default"
+          class="Tab"
+          accesskey="R" title="Log in to make a request for an event">
+         User <span class="AccessKey">L</span>ogin
+      </a>
+
+       
+      
+      
+  
+      <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_workflow.Default"
+          class="Tab"
+          accesskey="w" title="View your workflow">
+         My <span class="AccessKey">W</span>orkflow
+      </a>
+    
+
+
+   <div id="GrayLine">&nbsp;</div>   
+
+   <div id="Subtab" style="position:relative;top:0px">
+   
+   
+   
+
+
+     
+      <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130223,spfilter=46435,numweeks=1,lbdviewmode=list"
+          class="SubtabCurrent"
+    title="View events in locations for a specific date">
+    By Date
+    </a>      
+      | 
+      
+
+
+      
+      
+      <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByName?spdt=20130223,spfilter=46435,numweeks=1,lbdviewmode=list"
+          class="Subtab"
+    title="View locations by name">
+      By Name
+    </a>
+      | 
+      
+      
+      
+      
+
+
+
+
+      
+
+      
+     <a href="
+  javascript:openNewWindow('http://www.yale.edu/campusmap/')
+  "
+   class="Tab" accesskey="n" title="View a map of the campus">
+         <span class="AccessKey">U</span>niversity Map
+      </a>
+
+   
+
+   
+   </div>
+   
+
+    
+   </div>
+   
+
+
+</div>
+
+
+<div id="SelectionBox">
+   
+   
+   
+
+
+
+<div id="QSearch">
+   
+   <form name="frmSpaceQSearch" action="javascript:QSearchSpace()">
+      
+      
+      <div style="font-size:3px;">&nbsp;&nbsp;</div>
+      
+      <fieldset class="Qsearch">
+         <legend ACCESSKEY="q" class="Qsearch">
+            Space <span class="AccessKey">Q</span>uick Search
+         </legend>
+         <div style="font-size:6px;">&nbsp;</div>
+         <select id="selSpaceSearchOn" class="QSearchInputDropdown"><OPTION>Space Name</select><br />
+         <SELECT NAME="SP_FIND_BY.QSEARCH.R25" id="selFindBySp" class="QSearchInputDropdown">
+<OPTION VALUE="0">Is
+<OPTION VALUE="1" SELECTED>Starts With
+<OPTION VALUE="2">Contains
+<OPTION VALUE="3">Ends With
+</SELECT><br />
+         <input type="TEXT" id="txtCriteriaSp" size="17" maxlen="40" class="QSearchInputText"><input type="BUTTON" value="Go" title="Search Now" id="GoButton" onClick="QSearchSpace();" accesskey="g">       
+         <div style="font-size:6px;">&nbsp;</div>
+      </fieldset>              
+                         
+   
+   </form>
+   
+
+</div>
+
+<script type="text/javascript">
+
+   // Netscape 7 doesn't like having the select disabled; it won't display the text ("Space Name").
+   // So this js is a way to trick it.
+   
+   document.getElementById("selSpaceSearchOn").disabled = true;
+
+</script>
+
+<div id="MiniCal">
+   <div style="position:relative;">
+      <span class="CalSelectorOuter">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130223,spfilter=46435,lbdviewmode=list"
+            class="CalSelectorCurrent">
+            Day
+         </a>
+      </span>
+      
+      <span class="CalSelectorOuter">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.WeekList?spdt=20130223,spfilter=46435,lbdviewmode=list"
+            class="CalSelector">
+            Week
+         </a>
+      </span>
+      
+      <span class="CalSelectorOuter">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.MonthList?spdt=20130223,spfilter=46435,lbdviewmode=list"
+            class="CalSelector">
+            Month
+         </a>
+      </span>
+   </div> 
+   
+   <div>
+      <a class="MiniCalNav" href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130123,spfilter=46435,lbdviewmode=list">
+         <img alt="View Last Month" src="https://sfas-r25.its.yale.edu/wv3/images/left_tri_small.gif" />
+      </a>
+      <span class="MiniCalDate">February&nbsp;2013</span>
+      <a class="MiniCalNav" href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130323,spfilter=46435,lbdviewmode=list">
+         <img alt="View Next Month" src="https://sfas-r25.its.yale.edu/wv3/images/right_tri_small.gif" />
+      </a>
+   </div> 
+   
+   <div id="WeekLabels">
+          
+     <div class="WeekDayLabel"
+          style="left:0%">
+        Mo
+     </div> 
+          
+     <div class="WeekDayLabel"
+          style="left:14%">
+        Tu
+     </div> 
+          
+     <div class="WeekDayLabel"
+          style="left:28%">
+        We
+     </div> 
+          
+     <div class="WeekDayLabel"
+          style="left:42%">
+        Th
+     </div> 
+          
+     <div class="WeekDayLabel"
+          style="left:56%">
+        Fr
+     </div> 
+          
+     <div class="WeekEndLabel"
+          style="left:70%">
+        Sa
+     </div> 
+          
+     <div class="WeekEndLabel"
+          style="left:84%">
+        Su
+     </div> 
+      
+   </div> 
+   
+   <div id="Days" style="position:relative">
+   
+      <div class="MiniCalRow">    
+         <div class="CalendarDayOuter"
+              style="left:0%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130128,spfilter=46435,lbdviewmode=list"
+             class="CalendarExtraDay">
+             28
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:14%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130129,spfilter=46435,lbdviewmode=list"
+             class="CalendarExtraDay">
+             29
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:28%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130130,spfilter=46435,lbdviewmode=list"
+             class="CalendarExtraDay">
+             30
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:42%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130131,spfilter=46435,lbdviewmode=list"
+             class="CalendarExtraDay">
+             31
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:56%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130201,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             1
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:70%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130202,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             2
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:84%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130203,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             3
+          </a>
+       </div> 
+    </div>
+   
+      <div class="MiniCalRow">    
+         <div class="CalendarDayOuter"
+              style="left:0%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130204,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             4
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:14%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130205,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             5
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:28%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130206,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             6
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:42%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130207,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             7
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:56%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130208,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             8
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:70%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130209,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             9
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:84%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130210,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             10
+          </a>
+       </div> 
+    </div>
+   
+      <div class="MiniCalRow">    
+         <div class="CalendarDayOuter"
+              style="left:0%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130211,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             11
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:14%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130212,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             12
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:28%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130213,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             13
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:42%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130214,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             14
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:56%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130215,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             15
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:70%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130216,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             16
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:84%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130217,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             17
+          </a>
+       </div> 
+    </div>
+   
+      <div class="MiniCalRow">    
+         <div class="CalendarDayOuter"
+              style="left:0%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130218,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             18
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:14%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130219,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             19
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:28%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130220,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             20
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:42%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130221,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             21
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:56%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130222,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             22
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:70%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130223,spfilter=46435,lbdviewmode=list"
+             class="CalendarViewDay">
+             23
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:84%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130224,spfilter=46435,lbdviewmode=list"
+             class="CalendarToday">
+             24
+          </a>
+       </div> 
+    </div>
+   
+      <div class="MiniCalRow">    
+         <div class="CalendarDayOuter"
+              style="left:0%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130225,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             25
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:14%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130226,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             26
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:28%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130227,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             27
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:42%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130228,spfilter=46435,lbdviewmode=list"
+             class="CalendarDay">
+             28
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:56%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130301,spfilter=46435,lbdviewmode=list"
+             class="CalendarExtraDay">
+             1
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:70%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130302,spfilter=46435,lbdviewmode=list"
+             class="CalendarExtraDay">
+             2
+          </a>
+       </div> 
+    
+   
+          
+         <div class="CalendarDayOuter"
+              style="left:84%">
+          <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130303,spfilter=46435,lbdviewmode=list"
+             class="CalendarExtraDay">
+             3
+          </a>
+       </div> 
+    </div>
+   
+   </div> 
+   
+   
+      <div style="font-size:2px;">&nbsp;</div>
+   <div>
+      <a class="Today" href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?evdt=0,spfilter=46435,lbdviewmode=list">
+         Go to Today 
+      </a>
+   </div>
+ 
+</div> 
+
+
+
+
+<div id="Filters">
+   <div class="SelectionHead">Filters</div>
+
+            
+   <div class="CurrentFilterItem">
+      <a class="CurrentFilterItem" 
+         href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spfilter=46435,spdt=20130223,lbdviewmode=list">
+         All FAS Classrooms
+      </a>
+   </div>
+            
+   <div class="FilterItem">
+      <a class="FilterItem" 
+         href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spfilter=92575,spdt=20130223,lbdviewmode=list">
+         Architecture
+      </a>
+   </div>
+            
+   <div class="FilterItem">
+      <a class="FilterItem" 
+         href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spfilter=92373,spdt=20130223,lbdviewmode=list">
+         Athletics
+      </a>
+   </div>
+            
+   <div class="FilterItem">
+      <a class="FilterItem" 
+         href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spfilter=45629,spdt=20130223,lbdviewmode=list">
+         Center for Language Study
+      </a>
+   </div>
+            
+   <div class="FilterItem">
+      <a class="FilterItem" 
+         href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spfilter=26965,spdt=20130223,lbdviewmode=list">
+         Central Campus
+      </a>
+   </div>
+            
+   <div class="FilterItem">
+      <a class="FilterItem" 
+         href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spfilter=37728,spdt=20130223,lbdviewmode=list">
+         FAS Shared Classrooms
+      </a>
+   </div>
+            
+   <div class="FilterItem">
+      <a class="FilterItem" 
+         href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spfilter=26960,spdt=20130223,lbdviewmode=list">
+         Hillhouse Avenue Area
+      </a>
+   </div>
+            
+   <div class="FilterItem">
+      <a class="FilterItem" 
+         href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spfilter=26959,spdt=20130223,lbdviewmode=list">
+         Old Campus Area
+      </a>
+   </div>
+            
+   <div class="FilterItem">
+      <a class="FilterItem" 
+         href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spfilter=26986,spdt=20130223,lbdviewmode=list">
+         York Street Area
+      </a>
+   </div>
+   
+</div>
+
+
+
+</div>
+
+
+
+<div id="ContentBox">
+  
+
+
+<div>&nbsp;</div>
+<div class="EventListHeader">
+   <a class="EventListNav" href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130222,spfilter=46435,lbdviewmode=list">
+        <img alt="View Previous Date" title="View Previous Date" src="https://sfas-r25.its.yale.edu/wv3/images/left_tri.gif" />
+  </a>
+       <span style="vertical-align: top;">Events for Saturday Feb 23 2013</SPAN>
+   <a class="EventListNav" href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130224,spfilter=46435,lbdviewmode=list">
+        <img alt="View Next Date" title="View Next Date" src="https://sfas-r25.its.yale.edu/wv3/images/right_tri.gif" />
+  </a>
+</div>
+
+
+
+<div class="ViewModeSelector">
+   <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.DayList?spdt=20130223,spfilter=46435,lbdviewmode=grid">View as a grid</a>
+</div>
+
+<div>&nbsp;</div>
+
+
+<table border="0">
+   <tr>
+      <td class="ListHeading">Location</td>
+      <td class="ListHeading">Start</td>
+      <td class="ListHeading">End</td>
+      <td class="ListHeading">Event</td>
+      
+   </tr>
+
+  <tr><td colspan="99"><hr style="color:#999"></td></tr>
+
+
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=58,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Arthur K. Watson Hall" href="javascript:spaceInfo(58)">AKW 100</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=105,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Bass Library" href="javascript:spaceInfo(105)">BASSLB L70</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         16:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         17:30&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4155999);">LIBRARY-GLOBAL BRIGADES EXEC BOARD MTNG</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=106,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Bass Library" href="javascript:spaceInfo(106)">BASSLB L73</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         13:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         16:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4180171);">LIBRARY-MATH 115 OFFICE HOURS-GATANAGA</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=401,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Becton Engineering &amp; Applied Science Center" href="javascript:spaceInfo(401)">BCT CO31</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=92,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Bingham Hall" href="javascript:spaceInfo(92)">BM 013</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=93,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Bingham Hall" href="javascript:spaceInfo(93)">BM 014</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=115,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Davies Auditorium at Becton Center" href="javascript:spaceInfo(115)">DAVIES AUD</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=117,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Dunham Laboratory" href="javascript:spaceInfo(117)">DL 102</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=120,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Dunham Laboratory" href="javascript:spaceInfo(120)">DL 220</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=142,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="109 Grove Street" href="javascript:spaceInfo(142)">GR109 ROSENFELD</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=155,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Hall of Graduate Studies" href="javascript:spaceInfo(155)">HGS 217A</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=156,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Hall of Graduate Studies" href="javascript:spaceInfo(156)">HGS 217B</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         17:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         19:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="Meeting of YCC Spring Fling Committee" href="javascript:rsrvInfo(4094613);">SPRING FLING COMMITTEE MEETING</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=159,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Hall of Graduate Studies" href="javascript:spaceInfo(159)">HGS 220B</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         07:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         23:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4177570);">MOCK TRIAL CONFERENCE 2/23 & 2/24</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=160,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Hall of Graduate Studies" href="javascript:spaceInfo(160)">HGS 221</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         07:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         23:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4177570);">MOCK TRIAL CONFERENCE 2/23 & 2/24</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=161,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Hall of Graduate Studies" href="javascript:spaceInfo(161)">HGS 301</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         07:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         23:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4177570);">MOCK TRIAL CONFERENCE 2/23 & 2/24</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=163,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Hall of Graduate Studies" href="javascript:spaceInfo(163)">HGS 302</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         07:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         23:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4177570);">MOCK TRIAL CONFERENCE 2/23 & 2/24</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=168,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Hall of Graduate Studies" href="javascript:spaceInfo(168)">HGS B-05</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=169,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Hall of Graduate Studies" href="javascript:spaceInfo(169)">HGS B-07</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=170,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Hall of Graduate Studies" href="javascript:spaceInfo(170)">HGS B-08</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=171,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Hall of Graduate Studies" href="javascript:spaceInfo(171)">HGS B-09</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=536,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Hall of Graduate Studies" href="javascript:spaceInfo(536)">HGS B-11</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=3,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Linsly-Chittenden Hall" href="javascript:spaceInfo(3)">LC 101</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         08:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         17:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4100545);">IVY COUNCIL CONFERENCE 2/22-2/23</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=4,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Linsly-Chittenden Hall" href="javascript:spaceInfo(4)">LC 102</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         07:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         23:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4177570);">MOCK TRIAL CONFERENCE 2/23 & 2/24</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=5,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Linsly-Chittenden Hall" href="javascript:spaceInfo(5)">LC 103</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         07:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         23:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4177570);">MOCK TRIAL CONFERENCE 2/23 & 2/24</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=7,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Linsly-Chittenden Hall" href="javascript:spaceInfo(7)">LC 104</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         07:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         23:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4177570);">MOCK TRIAL CONFERENCE 2/23 & 2/24</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=8,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Linsly-Chittenden Hall" href="javascript:spaceInfo(8)">LC 105</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         07:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         23:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4177570);">MOCK TRIAL CONFERENCE 2/23 & 2/24</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=9,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Linsly-Chittenden Hall" href="javascript:spaceInfo(9)">LC 203</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         08:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         17:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4100545);">IVY COUNCIL CONFERENCE 2/22-2/23</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=11,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Linsly-Chittenden Hall" href="javascript:spaceInfo(11)">LC 204</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         08:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         17:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4100545);">IVY COUNCIL CONFERENCE 2/22-2/23</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=12,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Linsly-Chittenden Hall" href="javascript:spaceInfo(12)">LC 205</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         08:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         17:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4100545);">IVY COUNCIL CONFERENCE 2/22-2/23</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=13,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Linsly-Chittenden Hall" href="javascript:spaceInfo(13)">LC 206</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         08:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         17:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4100545);">IVY COUNCIL CONFERENCE 2/22-2/23</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=14,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Linsly-Chittenden Hall" href="javascript:spaceInfo(14)">LC 207</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=15,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Linsly-Chittenden Hall" href="javascript:spaceInfo(15)">LC 208</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         08:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         17:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4100545);">IVY COUNCIL CONFERENCE 2/22-2/23</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=16,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Linsly-Chittenden Hall" href="javascript:spaceInfo(16)">LC 209</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         09:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         17:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4124947);">YCDO MELLON-BOUCHET WRITING SYMPOSIUM</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=17,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Linsly-Chittenden Hall" href="javascript:spaceInfo(17)">LC 210</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         09:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         17:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4124947);">YCDO MELLON-BOUCHET WRITING SYMPOSIUM</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=18,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Linsly-Chittenden Hall" href="javascript:spaceInfo(18)">LC 211</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         09:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         17:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4124947);">YCDO MELLON-BOUCHET WRITING SYMPOSIUM</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=19,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Linsly-Chittenden Hall" href="javascript:spaceInfo(19)">LC 212</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         09:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         17:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4124947);">YCDO MELLON-BOUCHET WRITING SYMPOSIUM</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=20,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Linsly-Chittenden Hall" href="javascript:spaceInfo(20)">LC 213</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         09:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         17:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4124947);">YCDO MELLON-BOUCHET WRITING SYMPOSIUM</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=21,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Linsly-Chittenden Hall" href="javascript:spaceInfo(21)">LC 317</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         09:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         13:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4180816);">SIGMA PSI ZETA FUNCTION</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=22,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Linsly-Chittenden Hall" href="javascript:spaceInfo(22)">LC 318</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         07:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         23:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4177570);">MOCK TRIAL CONFERENCE 2/23 & 2/24</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=212,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Mason Laboratory" href="javascript:spaceInfo(212)">ML 104</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=75,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Mason Laboratory" href="javascript:spaceInfo(75)">ML 211</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         10:30&nbsp;
+         <br>
+      
+         
+         
+         14:30&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         11:20&nbsp;
+         <br>
+   
+      
+         
+      
+         15:45&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4179387);">STAT 100 MAKE UP CLASS 2/23</a>
+         
+         <br>
+
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4179389);">STAT 365 MAKE UP CLASS 2/23</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=231,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Phelps Hall" href="javascript:spaceInfo(231)">PH 310</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         13:30&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         14:20&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4178303);">GREK 141 MAKE UP CLASS</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=232,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Phelps Hall" href="javascript:spaceInfo(232)">PH 312</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=233,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Phelps Hall" href="javascript:spaceInfo(233)">PH 407</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=243,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="140 Prospect Street" href="javascript:spaceInfo(243)">PR140 102A</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=805,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="204 Prospect Street" href="javascript:spaceInfo(805)">PR204 B-02</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=875,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="204 Prospect Street" href="javascript:spaceInfo(875)">PR204 B-03</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=912,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="238 Prospect Street" href="javascript:spaceInfo(912)">PR238 03</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=1098,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Rosenkranz Hall" href="javascript:spaceInfo(1098)">RKZ 01</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=1100,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Rosenkranz Hall" href="javascript:spaceInfo(1100)">RKZ 02</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=1101,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Rosenkranz Hall" href="javascript:spaceInfo(1101)">RKZ 04</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=1104,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Rosenkranz Hall" href="javascript:spaceInfo(1104)">RKZ 05</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=1102,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Rosenkranz Hall" href="javascript:spaceInfo(1102)">RKZ 06</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=1103,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Rosenkranz Hall" href="javascript:spaceInfo(1103)">RKZ 08</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=1105,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Rosenkranz Hall" href="javascript:spaceInfo(1105)">RKZ 102</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=1106,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Rosenkranz Hall" href="javascript:spaceInfo(1106)">RKZ 202</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=1107,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Rosenkranz Hall" href="javascript:spaceInfo(1107)">RKZ 301</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=287,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Sheffield-Sterling-Strathcona Hall" href="javascript:spaceInfo(287)">SSS 114</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         19:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         22:30&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4177015);">YALE FAITH & ACTION LECTURE</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=791,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="81 Wall Street" href="javascript:spaceInfo(791)">WALL81 101</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=793,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="81 Wall Street" href="javascript:spaceInfo(793)">WALL81 301</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=794,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="81 Wall Street" href="javascript:spaceInfo(794)">WALL81 401</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=330,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Whitney Humanities Center" href="javascript:spaceInfo(330)">WHC B-02</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=331,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="Whitney Humanities Center" href="javascript:spaceInfo(331)">WHC B-03</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=334,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(334)">WLH 001</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         07:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         23:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4177570);">MOCK TRIAL CONFERENCE 2/23 & 2/24</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=335,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(335)">WLH 002</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         07:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         23:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4177570);">MOCK TRIAL CONFERENCE 2/23 & 2/24</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=336,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(336)">WLH 003</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         09:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         11:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4179430);">HIST 985 MAKE UP CLASS 2/23</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=337,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(337)">WLH 004</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=338,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(338)">WLH 006</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=339,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(339)">WLH 007</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         09:25&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         10:15&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4178279);">E&EB 150 MAKE UP CLASS</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=340,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(340)">WLH 009</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=341,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(341)">WLH 011</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         09:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         11:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4179430);">HIST 985 MAKE UP CLASS 2/23</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=342,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(342)">WLH 012</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=343,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(343)">WLH 013</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=344,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(344)">WLH 014</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=345,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(345)">WLH 015</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=346,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(346)">WLH 112</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         07:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         23:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4177570);">MOCK TRIAL CONFERENCE 2/23 & 2/24</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=347,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(347)">WLH 113</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         16:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         17:30&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4179590);">ELMSEED FOUNDER'S TALK</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=348,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(348)">WLH 114</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=349,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(349)">WLH 115</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=350,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(350)">WLH 116</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=351,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(351)">WLH 117</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         13:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         14:15&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4178306);">ECON 351 MAKE UP CLASS</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=352,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(352)">WLH 119</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         07:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         23:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4177570);">MOCK TRIAL CONFERENCE 2/23 & 2/24</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=353,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(353)">WLH 120</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         09:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         10:15&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4179381);">SPAN 225 SCT 02 MAKE UP CLASS</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=355,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(355)">WLH 202</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         07:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         23:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4177570);">MOCK TRIAL CONFERENCE 2/23 & 2/24</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=356,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(356)">WLH 203</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         07:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         23:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4177570);">MOCK TRIAL CONFERENCE 2/23 & 2/24</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=357,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(357)">WLH 204</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         10:30&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         11:20&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4179515);">TKSH 120/501 MAKE UP CLASS</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=358,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(358)">WLH 205</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         15:30&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         17:30&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4169646);">YSIG MACRO MEETING</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=359,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(359)">WLH 207</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=360,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(360)">WLH 208</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         10:30&nbsp;
+         <br>
+      
+         
+         
+         11:35&nbsp;
+         <br>
+      
+         
+         
+         19:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         11:20&nbsp;
+         <br>
+   
+      
+         
+      
+         12:25&nbsp;
+         <br>
+   
+      
+         
+      
+         22:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4179379);">BENG 249 MAKE UP CLASS 2/23</a>
+         
+         <br>
+
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4178287);">CPSC 201 MAKE UP CLASS 2/23</a>
+         
+         <br>
+
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4180157);">YALE ANIME SOCIETY SCREENINGS</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=361,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(361)">WLH 209</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         10:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         12:00&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4170365);">ASEMPA REHEARSALS</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=362,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(362)">WLH 210</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         14:00&nbsp;
+         <br>
+      
+         
+         
+         16:00&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         15:00&nbsp;
+         <br>
+   
+      
+         
+      
+         18:30&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4166249);">CHE HS SNGL CLSSRM EDUCATORS WEEKLY MTG</a>
+         
+         <br>
+
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4170457);">PROOF OF THE PUDDING REHEARSAL</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=363,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="William L. Harkness Hall" href="javascript:spaceInfo(363)">WLH 211</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=579,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="212 York Street" href="javascript:spaceInfo(579)">YK212 004</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=370,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="212 York Street" href="javascript:spaceInfo(370)">YK212 004A</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=371,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="212 York Street" href="javascript:spaceInfo(371)">YK212 106</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=135,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="220 York Street" href="javascript:spaceInfo(135)">YK220 001</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         09:00&nbsp;
+         <br>
+      
+         
+         
+         12:50&nbsp;
+         <br>
+      
+         
+         
+         18:50&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         12:30&nbsp;
+         <br>
+   
+      
+         
+      
+         15:30&nbsp;
+         <br>
+   
+      
+         
+      
+         22:30&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4180226);">BULLDOG PRODUCTIONS FILMING</a>
+         
+         <br>
+
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4179478);">UNDERGRAD PRODUCTION CIRCLE MIRROR TRANS</a>
+         
+         <br>
+
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4179480);">UNDERGRAD PRODUCTION CIRCLE MIRROR TRANS</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=136,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="220 York Street" href="javascript:spaceInfo(136)">YK220 002</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         09:25&nbsp;
+         <br>
+      
+         
+         
+         10:30&nbsp;
+         <br>
+      
+         
+         
+         11:35&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         10:15&nbsp;
+         <br>
+   
+      
+         
+      
+         11:20&nbsp;
+         <br>
+   
+      
+         
+      
+         12:25&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4180830);">CHNS 120 MAKE-UP CLASS</a>
+         
+         <br>
+
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4180836);">CHNS 120 MAKE-UP CLASS</a>
+         
+         <br>
+
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4180842);">CHNS 120 MAKE-UP CLASS</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=137,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="220 York Street" href="javascript:spaceInfo(137)">YK220 003</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         09:25&nbsp;
+         <br>
+      
+         
+         
+         10:30&nbsp;
+         <br>
+      
+         
+         
+         11:35&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         10:15&nbsp;
+         <br>
+   
+      
+         
+      
+         11:20&nbsp;
+         <br>
+   
+      
+         
+      
+         12:25&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4180832);">CHNS 120 MAKE-UP CLASS</a>
+         
+         <br>
+
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4180838);">CHNS 120 MAKE-UP CLASS</a>
+         
+         <br>
+
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4180844);">CHNS 120 MAKE-UP CLASS</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+   
+   <tr>
+   
+      <td valign="top">
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=138,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="220 York Street" href="javascript:spaceInfo(138)">YK220 004</a>   
+      </td>
+
+      <td class="ListText">
+   
+         
+         
+         09:25&nbsp;
+         <br>
+      
+         
+         
+         10:30&nbsp;
+         <br>
+      
+         
+         
+         11:35&nbsp;
+         <br>
+      
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         10:15&nbsp;
+         <br>
+   
+      
+         
+      
+         11:20&nbsp;
+         <br>
+   
+      
+         
+      
+         12:25&nbsp;
+         <br>
+   
+         
+      </td>
+      
+      <td class="ListText">
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4180828);">CHNS 120 MAKE-UP CLASS</a>
+         
+         <br>
+
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4180834);">CHNS 120 MAKE-UP CLASS</a>
+         
+         <br>
+
+      
+         
+      
+         <a title="" href="javascript:rsrvInfo(4180840);">CHNS 120 MAKE-UP CLASS</a>
+         
+         <br>
+
+         
+      </td>
+         
+   </tr>
+      
+     
+   
+    
+
+
+
+   
+      
+     
+   
+      <tr>
+      
+     
+      <td>
+         <a href="https://sfas-r25.its.yale.edu/wv3/wv3_servlet/urd/run/wv_space.ByNameFindGroup?spid=139,spdt=20130223">
+            <img border="0" title="Click to see events for this space" alt="Click to see events for this space" src="https://sfas-r25.its.yale.edu/wv3/images/event_matrix.gif" height="15px" width="18px" />
+         </a>
+         <a class="ListText" title="220 York Street" href="javascript:spaceInfo(139)">YK220 100</a>
+      </td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+      
+      <td>&nbsp;</td>
+       
+   </tr>      
+   
+    
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="clear:left;"><br/></div>
+
+   <div class="Tail">
+  <br />
+
+
+
+  All times are local for Eastern Standard Time.<br />
+    Questions? Comments? &nbsp;
+  <a href="mailto:classrooms@yale.edu">Please email room support.</a>
+   </div>
+<br />
+
+
+</div>
+
+</body>
+</html>

@@ -1,14 +1,18 @@
-<!DOCTYPE html>
-<html>
+<% # Layout for all content pages %>
+<!DOCTYPE html ng-app="Reserve">
 <head>
-  <title>Rooms</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <title>Yale Room Reservations</title>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+  <!-- <link rel="shortcut icon" href="/assets/favicon.ico" /> -->
+  
+  <link href = "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.8/themes/ui-lightness/jquery-ui.css" rel = "stylesheet" type = "text/css" />
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
-
-<%= yield %>
-
+  <%= yield %>
+<%= javascript_include_tag "application" %>
 </body>
 </html>

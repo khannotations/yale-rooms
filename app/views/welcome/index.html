@@ -1,0 +1,22 @@
+<h1>Yale Rooms</h1>
+<!-- ng-controller="UsersCtrl" -->
+<div>
+  <table>
+    <tr ng-repeat="room in rooms">
+      <td>{{room.name}}</td>
+      <td>{{room.location}}</td>
+      <td ng-repeat="event in room.events">
+        <p>{{event.name}}</p>
+        <b>{{formatTime(event.start_time)}}</b>
+        <p>{{formatTime(event.end_time)}}</p>
+      </td>
+    </tr>
+  </table>
+</div>
+<!-- ng-controller="UsersCtrl" -->
+<div>
+  <p>My name is {{me.name}}</p>
+  <ul ng-repeat="organization in me.organizations">
+    <li>{{organization.name}}</li>
+  </ul>
+</div>
