@@ -23,9 +23,9 @@
   if name is "all"
     $scope.rooms = Rooms.query(name: "all", date: date, period: period)
   else
+    $scope.rooms = []
     $scope.room = Rooms.get(name: name, date: date, period: period)
-
-
+    $scope.rooms.push $scope.room
 
   $scope.formatTime = (time) ->
     moment(time).format("MM-DD-YYYY")

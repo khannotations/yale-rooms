@@ -19,7 +19,9 @@ class RoomsController < ApplicationController
     name = params[:name].split "-"
     rm = name[0]
     num = name[1]
-    room = Room.get_room_with_events(rm, num, params[:date])
+    room = Room.where(name: rm, number: num).first
+    events = room.events_in(params[:date], params[:period])
+    room[:events] = events
     respond_with room
   end
   

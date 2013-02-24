@@ -19,5 +19,7 @@
         {templateUrl: '/assets/rooms.html', controller: @RoomsCtrl})
       .when("/rooms/:name/:date/:period", 
         {templateUrl: '/assets/rooms.html', controller: @RoomsCtrl})
+      .when("/me",
+        {templateUrl: '/assets/me.html', controller: @UsersCtrl})
       .otherwise({redirectTo: "/rooms/all/today/week"})
   ])
